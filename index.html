@@ -12,8 +12,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{min-height:100vh;font-family:'Cormorant Garamond',serif;overflow:hidden;background:var(--cream);}
-
-  /* ═══════════════ PETALS BG ═══════════════ */
+  
   .petals-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
   .petal{position:absolute;border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite;}
   @keyframes fall{
@@ -23,7 +22,6 @@
     100%{transform:translateY(110vh) rotate(720deg) scale(1.1);opacity:0;}
   }
 
-  /* ═══════════════ PAGE 1 ═══════════════ */
   #page1{
     position:relative;z-index:1;min-height:100vh;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -33,7 +31,6 @@
   }
   #page1.hidden{opacity:0;pointer-events:none;transform:scale(1.04);}
 
-  /* Stripe borders */
   .stripe{position:absolute;left:0;right:0;height:7px;
     background:repeating-linear-gradient(90deg,
       var(--rose) 0,var(--rose) 18px,
@@ -41,7 +38,6 @@
       var(--blush) 36px,var(--blush) 54px);}
   .stripe-top{top:0;} .stripe-bot{bottom:0;}
 
-  /* Side decorative lines */
   .side-line{
     position:absolute;top:0;bottom:0;width:3px;
     background:linear-gradient(180deg,transparent 0%,var(--rose) 20%,var(--gold) 50%,var(--rose) 80%,transparent 100%);
@@ -49,7 +45,6 @@
   }
   .side-line-l{left:22px;} .side-line-r{right:22px;}
 
-  /* Corner roses on page 1 */
   .p1-corner{position:absolute;font-size:2.8rem;opacity:.35;animation:cornerFloat 4s ease-in-out infinite;}
   @keyframes cornerFloat{0%,100%{transform:translateY(0) rotate(-5deg) scale(1)}50%{transform:translateY(-10px) rotate(5deg) scale(1.08)}}
   .p1-c-tl{top:28px;left:28px;animation-delay:0s;}
@@ -57,7 +52,6 @@
   .p1-c-bl{bottom:28px;left:28px;animation-delay:-2s;}
   .p1-c-br{bottom:28px;right:28px;animation-delay:-3s;}
 
-  /* Floating circle ornaments */
   .orb{
     position:absolute;border-radius:50%;pointer-events:none;
     animation:orbFloat 6s ease-in-out infinite;
@@ -71,7 +65,6 @@
   }
   .p1-badge{font-family:'Parisienne',cursive;font-size:1.05rem;color:var(--deep);letter-spacing:3px;opacity:.7;}
 
-  /* Animated ribbon above title */
   .p1-ribbon{
     display:flex;align-items:center;gap:10px;
     font-size:.75rem;letter-spacing:4px;color:var(--deep);text-transform:uppercase;opacity:.5;
@@ -92,13 +85,11 @@
 
   .p1-sub{font-size:1.2rem;color:#a0546e;font-style:italic;max-width:340px;line-height:1.7;}
 
-  /* Decorative dots row */
   .dot-row{display:flex;gap:8px;align-items:center;}
   .dot{width:6px;height:6px;border-radius:50%;background:var(--rose);opacity:.4;}
   .dot.big{width:9px;height:9px;opacity:.6;}
   .dot.gold{background:var(--gold);}
 
-  /* ═══════════════ FLEE BUTTONS ═══════════════ */
   .flee-btn{
     position:fixed;
     padding:18px 44px;
@@ -113,7 +104,6 @@
   .flee-btn:hover{box-shadow:0 12px 40px #e8517a88;}
   .flee-btn.invisible{opacity:0;pointer-events:none;}
 
-  /* ═══════════════ HEART RAIN OVERLAY ═══════════════ */
   #heartRain{
     position:fixed;inset:0;z-index:80;pointer-events:none;
     opacity:0;transition:opacity .3s;
@@ -140,7 +130,6 @@
     100%{transform:translateY(110vh) rotate(25deg) scale(1.1);opacity:0;}
   }
 
-  /* ═══════════════ PAGE 2 ═══════════════ */
   #page2{
     position:fixed;inset:0;z-index:5;
     display:flex;align-items:center;justify-content:center;
@@ -149,11 +138,9 @@
   }
   #page2.visible{opacity:1;pointer-events:all;}
 
-  /* Ambient glow blobs on page 2 */
   .glow-blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);animation:blobPulse 5s ease-in-out infinite;}
   @keyframes blobPulse{0%,100%{transform:scale(1);opacity:.18}50%{transform:scale(1.15);opacity:.28}}
 
-  /* Floating stars on page 2 */
   .float-star{
     position:absolute;pointer-events:none;
     font-size:1rem;color:var(--gold);opacity:0;
@@ -169,7 +156,6 @@
   .sparkle{position:absolute;pointer-events:none;font-size:1.2rem;animation:twinkle 2.5s ease-in-out infinite;opacity:0;}
   @keyframes twinkle{0%,100%{opacity:0;transform:scale(.5) rotate(0deg)}50%{opacity:1;transform:scale(1.2) rotate(180deg)}}
 
-  /* ═══════════════ CARD ═══════════════ */
   .card{
     position:relative;width:min(92vw,560px);
     background:linear-gradient(160deg,#2d0f1e 0%,#1a0a0f 50%,#2d0f1e 100%);
@@ -182,7 +168,6 @@
   .card::-webkit-scrollbar-thumb{background:#d4a84344;border-radius:2px;}
   .card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,#e8517a18 0%,transparent 70%);pointer-events:none;}
 
-  /* Animated card border glow */
   .card::after{
     content:'';position:absolute;inset:-1px;border-radius:24px;z-index:-1;
     background:linear-gradient(135deg,#e8517a44,#d4a84333,#e8517a44,#d4a84333);
@@ -223,7 +208,6 @@
   .card-signature{font-family:'Parisienne',cursive;font-size:1.6rem;color:var(--rose);margin-top:18px;text-shadow:0 0 20px #e8517a55;}
   .edit-hint{position:absolute;bottom:10px;right:16px;font-size:.65rem;color:#805060;letter-spacing:1px;font-style:italic;}
 
-  /* ═══════════════ CONFETTI ═══════════════ */
   .confetti-piece{position:fixed;border-radius:2px;pointer-events:none;z-index:200;animation:confettiFall 2.5s ease-in forwards;}
   @keyframes confettiFall{0%{transform:translateY(0) rotate(0deg) scale(1);opacity:1}100%{transform:translateY(80vh) rotate(720deg) scale(.4);opacity:0}}
 </style>
@@ -276,20 +260,16 @@
   </div>
 </div>
 
-<!-- 4 identical orbit buttons -->
 <button class="flee-btn" id="btn0">🎀 Открыть открытку</button>
 <button class="flee-btn invisible" id="btn1">🎀 Открыть открытку</button>
 <button class="flee-btn invisible" id="btn2">🎀 Открыть открытку</button>
 <button class="flee-btn invisible" id="btn3">🎀 Открыть открытку</button>
 
-<!-- HEART RAIN OVERLAY -->
 <div id="heartRain">
   <div class="heart-rain-bg"></div>
 </div>
 
-<!-- ═══ PAGE 2 ═══ -->
 <div id="page2">
-  <!-- Ambient glow blobs -->
   <div class="glow-blob" style="width:500px;height:500px;background:#e8517a;top:-150px;left:-150px;animation-delay:0s;"></div>
   <div class="glow-blob" style="width:400px;height:400px;background:#8b1a4a;bottom:-100px;right:-100px;animation-delay:-2.5s;"></div>
   <div class="glow-blob" style="width:300px;height:300px;background:#d4a843;top:40%;right:5%;animation-delay:-1.2s;"></div>
@@ -357,7 +337,6 @@
 </div>
 
 <script>
-/* ── PETALS ── */
 (function(){
   const c=document.getElementById('petals');
   for(let i=0;i<28;i++){
@@ -373,7 +352,6 @@
   }
 })();
 
-/* ── BUTTON ENGINE ── */
 const btns=[0,1,2,3].map(i=>document.getElementById('btn'+i));
 function cx(){return window.innerWidth/2;}
 function cy(){return window.innerHeight*.85;}
@@ -487,7 +465,6 @@ function loop(){
 }
 loop();
 
-/* ── HEART RAIN TRANSITION ── */
 function launchHeartRain(cb){
   const overlay=document.getElementById('heartRain');
   overlay.classList.add('active');
@@ -519,7 +496,6 @@ function launchHeartRain(cb){
   },1800);
 }
 
-/* ── CONFETTI ── */
 function launchConfetti(){
   const colors=['#e8517a','#d4a843','#f9c8d9','#9ab87a','#c9b8e8','#fff','#ff6b9d'];
   for(let i=0;i<120;i++){
@@ -537,7 +513,6 @@ function launchConfetti(){
   }
 }
 
-/* ── OPEN CARD ── */
 function openCard(){
   cancelAnimationFrame(rafId);
   btns.forEach(b=>{b.style.opacity='0';b.style.pointerEvents='none';});
